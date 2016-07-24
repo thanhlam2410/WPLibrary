@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>5bd84ff5-e340-4e42-9bb5-060f38e832cf</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>WPControls</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Binding\PreventScrollBinding.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\ApplicationSpace.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\IImageSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\TemplatedVisualTreeExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\VisualTreeExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DialogService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Media\ImageStates.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Media\ImageView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Media\IPhotoSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Media\Photo\PhotoViewer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Memory\MemoryTracker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Toast\ConfirmationPrompt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Toast\CustomPrompt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Toast\MessagePrompt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Toast\PopUp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Toast\PopUpEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Toast\PopUpResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Toast\ToastPrompt.cs" />
+  </ItemGroup>
+</Project>

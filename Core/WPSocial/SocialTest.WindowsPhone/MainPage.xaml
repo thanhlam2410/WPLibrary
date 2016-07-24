@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="SocialTest.WindowsPhone.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SocialTest.WindowsPhone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer>
+        <StackPanel>
+            <Button HorizontalAlignment="Center" VerticalAlignment="Top"
+                    FontSize="24" Content="Login Facebook" Click="Button_Click"/>
+
+            <Button HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="shareFb"
+                    FontSize="24" Content="Share Facebook" Click="shareFb_Click"/>
+
+            <Button HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="postFb"
+                    FontSize="24" Content="Post Facebook" Click="postFb_Click"/>
+
+            <Button HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="appRequestFb"
+                    FontSize="24" Content="App Request Facebook" Click="appRequestFb_Click"/>
+
+            <Button HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="likePageFb"
+                    FontSize="24" Content="Like Page" Click="likePageFb_Click"/>
+
+            <Button HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="google"
+                    FontSize="24" Content="Login Google" Click="google_Click"/>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

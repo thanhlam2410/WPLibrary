@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>f72d4f45-2a2b-4e1a-9db6-25f16803a374</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>WPSocial</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Delegates\HttpFailedHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\AuthenticationTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\ResponseTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Facebook\Exceptions\FacebookOauthException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Facebook\FacebookActionResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Facebook\FacebookAPI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Facebook\FacebookClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Facebook\FacebookConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Facebook\FacebookController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Facebook\FacebookModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Facebook\FacebookOauthResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Facebook\Models\Data\FacebookUserInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Facebook\Models\ModelAppRequestFacebook.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Facebook\Models\ModelPostFacebook.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Facebook\Models\ModelSendFacebook.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Facebook\Models\ModelShareFacebook.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google\GoogleAPI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google\GoogleClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google\GoogleConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google\GoogleController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google\GoogleModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google\GoogleOauthResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google\Models\Data\GoogleAvatar.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google\Models\Data\GoogleProfile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Google\Models\Data\ModelGoogleAuthorization.cs" />
+  </ItemGroup>
+</Project>

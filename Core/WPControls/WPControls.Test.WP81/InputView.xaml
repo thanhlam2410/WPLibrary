@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="ME.Controls.Test.WP81.InputView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ME.Controls.Test.WP81"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:input="using:WPControls.Input"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <input:AdvancedTextBox PlaceholderText="PlaceHolder">
+            <input:AdvancedTextBox.RightButtonTemplate>
+                <DataTemplate>
+                    <TextBlock Text="Right Button" Foreground="Black"/>
+                </DataTemplate>
+            </input:AdvancedTextBox.RightButtonTemplate>
+            <input:AdvancedTextBox.LeftButtonTemplate>
+                <DataTemplate>
+                    <TextBlock Text="Left Button" Foreground="Black"/>
+                </DataTemplate>
+            </input:AdvancedTextBox.LeftButtonTemplate>
+        </input:AdvancedTextBox>
+    </Grid>
+</Page>

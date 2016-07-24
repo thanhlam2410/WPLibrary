@@ -1,0 +1,269 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:toast="clr-namespace:WPControls.Toast"
+                    xmlns:media="clr-namespace:WPControls.Media"
+                    xmlns:photo="clr-namespace:WPControls.Media.Photo"
+                    xmlns:input="clr-namespace:WPControls.Input"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <FontFamily x:Key="FontFamilySegoeNormal">Segoe WP</FontFamily>
+    <FontFamily x:Key="FontFamilySegoeSemiBold">Segoe WP Semibold</FontFamily>
+    <FontFamily x:Key="FontFamilySegoeSemiLight">Segoe WP SemiLight</FontFamily>
+    <sys:Double x:Key="DefaultFontSizeExtraSmall">12</sys:Double>
+    <sys:Double x:Key="DefaultFontSizeNormal">20</sys:Double>
+    <sys:Double x:Key="DefaultFontSizeMedium">22.667</sys:Double>
+    <sys:Double x:Key="DefaultFontSizeMediumLarge">25.333</sys:Double>
+
+    <!--Toast message-->
+    <Style TargetType="toast:ToastPrompt">
+        <Setter Property="FontFamily" Value="{StaticResource FontFamilySegoeNormal}" />
+        <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeSmall}" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Background" Value="#BFFFFFFF" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="Overlay" Value="Transparent" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toast:ToastPrompt">
+                    <Grid VerticalAlignment="{TemplateBinding VerticalAlignment}" Background="{TemplateBinding Background}">
+                        <StackPanel VerticalAlignment="Bottom" Margin="24,32,16,5" Orientation="{TemplateBinding TextOrientation}">
+                            <StackPanel Margin="0,0,16,0" VerticalAlignment="Bottom" Orientation="Horizontal">
+                                <Image Margin="0,0,16,0" Visibility="Collapsed" Name="ToastImage" VerticalAlignment="Bottom" Width="{TemplateBinding ImageWidth}" Height="{TemplateBinding ImageHeight}" Source="{TemplateBinding ImageSource}" Stretch="{TemplateBinding Stretch}" />
+                                <TextBlock Text="{TemplateBinding Title}" FontWeight="Bold" VerticalAlignment="Center" Margin="0" Padding="0" />
+                            </StackPanel>
+                            <TextBlock Text="{TemplateBinding Message}" Margin="0" Padding="0" TextWrapping="{TemplateBinding TextWrapping}" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Message Prompt-->
+    <Style TargetType="toast:MessagePrompt">
+        <Setter Property="FontFamily" Value="{StaticResource FontFamilySegoeNormal}"/>
+        <Setter Property="FontSize" Value="{StaticResource DefaultFontSizeNormal}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toast:MessagePrompt">
+                    <Grid>
+                        <Border VerticalAlignment="Center" Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="{TemplateBinding BorderBrush}"
+                                CornerRadius="{TemplateBinding CornerRadius}" Margin="{TemplateBinding Margin}">
+                            <StackPanel Margin="{TemplateBinding Padding}">
+                                <TextBlock Text="{TemplateBinding Title}" Margin="10,10,10,10" TextWrapping="Wrap" FontWeight="Bold" HorizontalAlignment="Center"
+                                           FontFamily="{StaticResource FontFamilySegoeNormal}" FontSize="{TemplateBinding FontSize}"/>
+                                <ContentPresenter Content="{TemplateBinding Body}" Margin="10,10"/>
+                                <Border BorderThickness="1" HorizontalAlignment="Stretch" Background="LightGray" BorderBrush="LightGray"/>
+                                <Border Name="CancelBorder" CornerRadius="0" BorderBrush="Transparent" BorderThickness="0"
+                                        MinHeight="30" MaxHeight="60" MinWidth="100">
+                                    <Border.Background>
+                                        <SolidColorBrush Color="Black" Opacity="0"/>
+                                    </Border.Background>
+                                    <TextBlock Text="{TemplateBinding CancelButtonMessage}" TextWrapping="Wrap" Margin="5,5,5,5" FontSize="{StaticResource DefaultFontSizeMedium}" Foreground="{TemplateBinding CancelButtonForeground}" TextAlignment="Center"/>
+                                </Border>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Confirmation Prompt-->
+    <Style TargetType="toast:ConfirmationPrompt">
+        <Setter Property="FontFamily" Value="{StaticResource FontFamilySegoeNormal}"/>
+        <Setter Property="FontSize" Value="{StaticResource DefaultFontSizeNormal}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toast:ConfirmationPrompt">
+                    <Grid>
+                        <Border VerticalAlignment="Center" Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="{TemplateBinding BorderBrush}"
+                                CornerRadius="{TemplateBinding CornerRadius}" Margin="{TemplateBinding Margin}">
+                            <StackPanel Margin="{TemplateBinding Padding}">
+                                <!--Title-->
+                                <TextBlock Text="{TemplateBinding Title}" Margin="10,10,10,10" TextWrapping="Wrap" FontWeight="Bold" HorizontalAlignment="Center"
+                                           FontFamily="{StaticResource FontFamilySegoeNormal}" FontSize="{TemplateBinding FontSize}"/>
+
+                                <!--Content-->
+                                <ContentPresenter Content="{TemplateBinding Body}" Margin="10,10"/>
+
+                                <!--Horizontal seperator-->
+                                <Border BorderThickness="1" HorizontalAlignment="Stretch" Background="LightGray" BorderBrush="LightGray"/>
+
+                                <!--Action buttons-->
+                                <Grid MinHeight="30" MaxHeight="60" MinWidth="100">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <!--Left button-->
+                                    <Border Name="LeftActionBorder" Grid.Column="0" CornerRadius="0" BorderBrush="Transparent" BorderThickness="0">
+                                        <Border.Background>
+                                            <SolidColorBrush Color="Black" Opacity="0"/>
+                                        </Border.Background>
+                                        <TextBlock Text="{TemplateBinding LeftButtonMessage}" TextWrapping="Wrap" Margin="5,5,5,5" FontSize="{StaticResource DefaultFontSizeMedium}" Foreground="{TemplateBinding LeftButtonForeground}" TextAlignment="Center"/>
+                                    </Border>
+
+                                    <!--Vertical Seperator-->
+                                    <Border Grid.Column="1" BorderThickness="1" VerticalAlignment="Stretch" Background="LightGray" BorderBrush="LightGray"/>
+
+                                    <!--Right button-->
+                                    <Border Name="RightActionBorder" Grid.Column="2" CornerRadius="0" BorderBrush="Transparent" BorderThickness="0">
+                                        <Border.Background>
+                                            <SolidColorBrush Color="Black" Opacity="0"/>
+                                        </Border.Background>
+                                        <TextBlock Text="{TemplateBinding RightButtonMessage}" TextWrapping="Wrap" Margin="5,5,5,5" FontSize="{StaticResource DefaultFontSizeMedium}" Foreground="{TemplateBinding RightButtonForeground}" TextAlignment="Center"/>
+                                    </Border>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Custom Prompt-->
+    <Style TargetType="toast:CustomPrompt">
+        <Setter Property="FontFamily" Value="{StaticResource FontFamilySegoeNormal}"/>
+        <Setter Property="FontSize" Value="{StaticResource DefaultFontSizeNormal}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toast:MessagePrompt">
+                    <Grid>
+                        <Border VerticalAlignment="Stretch" Background="Transparent" BorderThickness="1" BorderBrush="{TemplateBinding BorderBrush}"
+                                CornerRadius="0" Margin="{TemplateBinding Margin}">
+                            <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                                <Grid Margin="{TemplateBinding Padding}" x:Name="BodyContainer"/>
+                            </ScrollViewer>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Image view-->
+    <Style TargetType="media:ImageView">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="media:ImageView">
+                    <Grid>
+                        <Border x:Name="PlaceholderBorder" Opacity="{TemplateBinding PlaceholderOpacity}" Background="{TemplateBinding PlaceholderBackground}">
+                            <ContentPresenter x:Name="Placeholder" Width="480" Height="360" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ContentTemplate="{TemplateBinding PlaceHolderTemplate}"/>
+                        </Border>
+                        <Image x:Name="PrimaryImage" Source="{TemplateBinding Source}" Stretch="{TemplateBinding Stretch}">
+                            <Image.RenderTransform>
+                                <CompositeTransform x:Name="ImageTransform"/>
+                            </Image.RenderTransform>
+                        </Image>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Advanced TextBox-->
+    <Style TargetType="input:AdvancedTextBox">
+        <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilyNormal}"/>
+        <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMediumLarge}"/>
+        <Setter Property="Background" Value="{StaticResource PhoneTextBoxBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource PhoneTextBoxForegroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource PhoneTextBoxBrush}"/>
+        <Setter Property="SelectionBackground" Value="{StaticResource PhoneAccentBrush}"/>
+        <Setter Property="SelectionForeground" Value="{StaticResource PhoneTextBoxSelectionForegroundBrush}"/>
+        <Setter Property="BorderThickness" Value="{StaticResource PhoneBorderThickness}"/>
+        <Setter Property="Padding" Value="2"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="input:AdvancedTextBox">
+                    <Grid Background="Transparent">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver"/>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="MainBorder">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="MainBorder">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneDisabledBrush}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentElement">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneDisabledBrush}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="ReadOnly">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="MainBorder">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="ReadonlyBorder">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="ReadonlyBorder">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneTextBoxBrush}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="ReadonlyBorder">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneTextBoxBrush}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentElement">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneTextBoxReadOnlyBrush}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="MainBorder">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneTextBoxEditBackgroundBrush}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="MainBorder">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneTextBoxEditBorderBrush}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unfocused"/>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Border x:Name="MainBorder" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="{TemplateBinding CornerRadius}"/>
+                        <Border x:Name="ReadonlyBorder" BorderBrush="{StaticResource PhoneDisabledBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="Transparent" Visibility="Collapsed"/>
+                        <Border BorderBrush="Transparent" BorderThickness="{TemplateBinding BorderThickness}" Background="Transparent" Margin="{StaticResource PhoneTouchTargetOverhang}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <!--Left Button-->
+                                <ContentPresenter x:Name="LeftButtonPresenter" Grid.Column="0" ContentTemplate="{TemplateBinding LeftButtonTemplate}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="{TemplateBinding VisibleLeftButton}"/>
+
+                                <!--Content-->
+                                <Grid Grid.Column="1">
+                                    <ContentControl x:Name="ContentElement" BorderThickness="1" HorizontalContentAlignment="Stretch" Margin="{StaticResource PhoneTextBoxInnerMargin}" Padding="{TemplateBinding Padding}" VerticalContentAlignment="Stretch"/>
+                                    <TextBlock x:Name="HintContentElement" Text="{TemplateBinding Hint}" Margin="{StaticResource PhoneTextBoxInnerMargin}" Padding="{TemplateBinding Padding}" Foreground="{TemplateBinding TextHintForeground}" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}"/>
+                                </Grid>
+
+                                <!--Right Button-->
+                                <ContentPresenter x:Name="RightButtonPresenter" Grid.Column="2" ContentTemplate="{TemplateBinding RightButtonTemplate}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="{TemplateBinding VisibleRightButton}"/>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

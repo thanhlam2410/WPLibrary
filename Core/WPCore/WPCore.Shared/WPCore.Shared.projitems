@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>58fed005-fe6e-4d05-be3a-5da17d6ba904</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>WPCore</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Encryption\Base32.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Encryption\BaseRC4.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Encryption\DESCryptography.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Encryption\MD5Core.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Encryption\DataEncryptor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Http\Enums\HttpDataTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Http\Enums\HttpMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Http\AdvancedHttpClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Http\Models\FileDataRequestModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Http\Models\FormDataRequestModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Http\Models\HttpData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Http\Models\HttpResultModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Http\Models\MultiPartFormDataRequestModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Http\Models\RawDataRequestModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Http\Models\ResourceGetModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Json\Enums\JsonTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Json\JsonConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Location\LocationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Location\LocationModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Patterns\ServiceLocator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Platform\UserAgentHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Platform\NetworkHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Platform\NetworkTypes.cs" />
+  </ItemGroup>
+</Project>
