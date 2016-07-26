@@ -3,41 +3,41 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WPCore.Shared", "Core\WPCore\WPCore.Shared\WPCore.Shared.shproj", "{58FED005-FE6E-4D05-BE3A-5DA17D6BA904}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WPCore.Shared", "src\WPCore\WPCore.Shared\WPCore.Shared.shproj", "{58FED005-FE6E-4D05-BE3A-5DA17D6BA904}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPCore", "WPCore", "{C2CDB05F-E466-4C2E-BBF0-113F06409303}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPCore.WinRT", "Core\WPCore\WPCore.WinRT\WPCore.WinRT.csproj", "{F79D2852-278B-4651-A448-36E341FD4922}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPCore.WinRT", "src\WPCore\WPCore.WinRT\WPCore.WinRT.csproj", "{F79D2852-278B-4651-A448-36E341FD4922}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPCore.WP8", "Core\WPCore\WPCore.WP8\WPCore.WP8.csproj", "{91DFA75E-AB5F-4EBB-9662-3A5B4D58C71B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPCore.WP8", "src\WPCore\WPCore.WP8\WPCore.WP8.csproj", "{91DFA75E-AB5F-4EBB-9662-3A5B4D58C71B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPSocial", "WPSocial", "{A4E1C426-E839-48C0-892C-014E684E41AE}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WPSocial.Shared", "Core\WPSocial\WPSocial.Shared\WPSocial.Shared.shproj", "{F72D4F45-2A2B-4E1A-9DB6-25F16803A374}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WPSocial.Shared", "src\WPSocial\WPSocial.Shared\WPSocial.Shared.shproj", "{F72D4F45-2A2B-4E1A-9DB6-25F16803A374}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPSocial.WinRT", "Core\WPSocial\WPSocial.WinRT\WPSocial.WinRT.csproj", "{22345467-F3B9-47BC-B2E3-BB84FC412D5F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPSocial.WinRT", "src\WPSocial\WPSocial.WinRT\WPSocial.WinRT.csproj", "{22345467-F3B9-47BC-B2E3-BB84FC412D5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPSocial.WP8", "Core\WPSocial\WPSocial.WP8\WPSocial.WP8.csproj", "{952D83A6-7E7D-4E6F-B343-88AAC9826D95}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPSocial.WP8", "src\WPSocial\WPSocial.WP8\WPSocial.WP8.csproj", "{952D83A6-7E7D-4E6F-B343-88AAC9826D95}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPControls", "WPControls", "{C0AD7629-0737-42C0-903D-AAF951251690}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WPControls.Shared", "Core\WPControls\WPControls.Shared\WPControls.Shared.shproj", "{5BD84FF5-E340-4E42-9BB5-060F38E832CF}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WPControls.Shared", "src\WPControls\WPControls.Shared\WPControls.Shared.shproj", "{5BD84FF5-E340-4E42-9BB5-060F38E832CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPControls.WP8", "Core\WPControls\WPControls.WP8\WPControls.WP8.csproj", "{E70F9D3A-A1AE-4F9B-9F4E-D9738FE90DAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPControls.WP8", "src\WPControls\WPControls.WP8\WPControls.WP8.csproj", "{E70F9D3A-A1AE-4F9B-9F4E-D9738FE90DAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPControls.WP81", "Core\WPControls\WPControls.WP81\WPControls.WP81.csproj", "{77D4F760-C0B4-4E7E-8891-4FAF1944FC8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPControls.WP81", "src\WPControls\WPControls.WP81\WPControls.WP81.csproj", "{77D4F760-C0B4-4E7E-8891-4FAF1944FC8B}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Core\WPSocial\WPSocial.Shared\WPSocial.Shared.projitems*{22345467-f3b9-47bc-b2e3-bb84fc412d5f}*SharedItemsImports = 4
-		Core\WPCore\WPCore.Shared\WPCore.Shared.projitems*{58fed005-fe6e-4d05-be3a-5da17d6ba904}*SharedItemsImports = 13
-		Core\WPControls\WPControls.Shared\WPControls.Shared.projitems*{5bd84ff5-e340-4e42-9bb5-060f38e832cf}*SharedItemsImports = 13
-		Core\WPControls\WPControls.Shared\WPControls.Shared.projitems*{77d4f760-c0b4-4e7e-8891-4faf1944fc8b}*SharedItemsImports = 4
-		Core\WPCore\WPCore.Shared\WPCore.Shared.projitems*{91dfa75e-ab5f-4ebb-9662-3a5b4d58c71b}*SharedItemsImports = 4
-		Core\WPSocial\WPSocial.Shared\WPSocial.Shared.projitems*{952d83a6-7e7d-4e6f-b343-88aac9826d95}*SharedItemsImports = 4
-		Core\WPControls\WPControls.Shared\WPControls.Shared.projitems*{e70f9d3a-a1ae-4f9b-9f4e-d9738fe90daf}*SharedItemsImports = 4
-		Core\WPSocial\WPSocial.Shared\WPSocial.Shared.projitems*{f72d4f45-2a2b-4e1a-9db6-25f16803a374}*SharedItemsImports = 13
-		Core\WPCore\WPCore.Shared\WPCore.Shared.projitems*{f79d2852-278b-4651-a448-36e341fd4922}*SharedItemsImports = 4
+		src\WPSocial\WPSocial.Shared\WPSocial.Shared.projitems*{22345467-f3b9-47bc-b2e3-bb84fc412d5f}*SharedItemsImports = 4
+		src\WPCore\WPCore.Shared\WPCore.Shared.projitems*{58fed005-fe6e-4d05-be3a-5da17d6ba904}*SharedItemsImports = 13
+		src\WPControls\WPControls.Shared\WPControls.Shared.projitems*{5bd84ff5-e340-4e42-9bb5-060f38e832cf}*SharedItemsImports = 13
+		src\WPControls\WPControls.Shared\WPControls.Shared.projitems*{77d4f760-c0b4-4e7e-8891-4faf1944fc8b}*SharedItemsImports = 4
+		src\WPCore\WPCore.Shared\WPCore.Shared.projitems*{91dfa75e-ab5f-4ebb-9662-3a5b4d58c71b}*SharedItemsImports = 4
+		src\WPSocial\WPSocial.Shared\WPSocial.Shared.projitems*{952d83a6-7e7d-4e6f-b343-88aac9826d95}*SharedItemsImports = 4
+		src\WPControls\WPControls.Shared\WPControls.Shared.projitems*{e70f9d3a-a1ae-4f9b-9f4e-d9738fe90daf}*SharedItemsImports = 4
+		src\WPSocial\WPSocial.Shared\WPSocial.Shared.projitems*{f72d4f45-2a2b-4e1a-9db6-25f16803a374}*SharedItemsImports = 13
+		src\WPCore\WPCore.Shared\WPCore.Shared.projitems*{f79d2852-278b-4651-a448-36e341fd4922}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

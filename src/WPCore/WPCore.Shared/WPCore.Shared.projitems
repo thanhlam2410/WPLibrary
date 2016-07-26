@@ -26,6 +26,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Http\Models\ResourceGetModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Json\Enums\JsonTypes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Json\JsonConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Json\JsonExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Location\LocationHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Location\LocationModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Patterns\ServiceLocator.cs" />
