@@ -40,6 +40,7 @@
     <TargetPlatform Include="WindowsPhoneApp, Version=8.1" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Platform\InAppHelper.cs" />
     <Compile Include="Platform\PlatformHelper.cs" />
     <Compile Include="Platform\PlatformUtility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
