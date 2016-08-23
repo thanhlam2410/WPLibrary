@@ -9,6 +9,7 @@
     <Import_RootNamespace>WPCore</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Binding\BindingBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Encryption\Base32.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Encryption\BaseRC4.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Encryption\DESCryptography.cs" />
